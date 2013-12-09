@@ -9,6 +9,7 @@ namespace LiteStatus
 	{
 		private Timer _updateTimer;
 		private bool _timerStarted;
+		private BalanceData _firstBalance;
 
 		public MainWindow () : base (Gtk.WindowType.Toplevel)
 		{
@@ -64,6 +65,14 @@ namespace LiteStatus
 				confirmedLabel.Text = balance.confirmed.ToString ();
 				unconfirmedLabel.Text = balance.unconfirmed.ToString ();
 				orphanedLabel.Text = balance.unconfirmed.ToString ();
+
+				if (_firstBalance == null) {
+					_firstBalance = new BalanceData ();
+					_firstBalance.confirmed = balance.confirmed;
+					_firstBalance.unconfirmed = balance.unconfirmed;
+					_firstBalance.orphaned = balance.orphaned;
+				}
+				confirmedDiffLabel.Text = (balance.confirmed - _firstBalance.confirmed).ToString ();
 			}
 		}
 

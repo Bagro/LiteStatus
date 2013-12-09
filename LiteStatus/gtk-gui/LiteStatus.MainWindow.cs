@@ -18,6 +18,7 @@ namespace LiteStatus
 		private global::Gtk.HBox balanceConfirmedhbox;
 		private global::Gtk.Label label1;
 		private global::Gtk.Label confirmedLabel;
+		private global::Gtk.Label confirmedDiffLabel;
 		private global::Gtk.HBox balanceUnconfirmedhbox;
 		private global::Gtk.Label label3;
 		private global::Gtk.Label unconfirmedLabel;
@@ -118,6 +119,7 @@ namespace LiteStatus
 			this.expander1.Expanded = true;
 			// Container child expander1.Gtk.Container+ContainerChild
 			this.vbox2 = new global::Gtk.VBox ();
+			this.vbox2.Name = "vbox2";
 			this.vbox2.Spacing = 6;
 			// Container child vbox2.Gtk.Box+BoxChild
 			this.balanceConfirmedhbox = new global::Gtk.HBox ();
@@ -141,11 +143,21 @@ namespace LiteStatus
 			w10.Position = 1;
 			w10.Expand = false;
 			w10.Fill = false;
-			this.vbox2.Add (this.balanceConfirmedhbox);
-			global::Gtk.Box.BoxChild w11 = ((global::Gtk.Box.BoxChild)(this.vbox2 [this.balanceConfirmedhbox]));
-			w11.Position = 0;
+			// Container child balanceConfirmedhbox.Gtk.Box+BoxChild
+			this.confirmedDiffLabel = new global::Gtk.Label ();
+			this.confirmedDiffLabel.Name = "confirmedDiffLabel";
+			this.confirmedDiffLabel.LabelProp = global::Mono.Unix.Catalog.GetString ("0");
+			this.balanceConfirmedhbox.Add (this.confirmedDiffLabel);
+			global::Gtk.Box.BoxChild w11 = ((global::Gtk.Box.BoxChild)(this.balanceConfirmedhbox [this.confirmedDiffLabel]));
+			w11.PackType = ((global::Gtk.PackType)(1));
+			w11.Position = 2;
 			w11.Expand = false;
 			w11.Fill = false;
+			this.vbox2.Add (this.balanceConfirmedhbox);
+			global::Gtk.Box.BoxChild w12 = ((global::Gtk.Box.BoxChild)(this.vbox2 [this.balanceConfirmedhbox]));
+			w12.Position = 0;
+			w12.Expand = false;
+			w12.Fill = false;
 			// Container child vbox2.Gtk.Box+BoxChild
 			this.balanceUnconfirmedhbox = new global::Gtk.HBox ();
 			this.balanceUnconfirmedhbox.Name = "balanceUnconfirmedhbox";
@@ -155,24 +167,24 @@ namespace LiteStatus
 			this.label3.Name = "label3";
 			this.label3.LabelProp = global::Mono.Unix.Catalog.GetString ("Unconfirmed:");
 			this.balanceUnconfirmedhbox.Add (this.label3);
-			global::Gtk.Box.BoxChild w12 = ((global::Gtk.Box.BoxChild)(this.balanceUnconfirmedhbox [this.label3]));
-			w12.Position = 0;
-			w12.Expand = false;
-			w12.Fill = false;
+			global::Gtk.Box.BoxChild w13 = ((global::Gtk.Box.BoxChild)(this.balanceUnconfirmedhbox [this.label3]));
+			w13.Position = 0;
+			w13.Expand = false;
+			w13.Fill = false;
 			// Container child balanceUnconfirmedhbox.Gtk.Box+BoxChild
 			this.unconfirmedLabel = new global::Gtk.Label ();
 			this.unconfirmedLabel.Name = "unconfirmedLabel";
 			this.unconfirmedLabel.LabelProp = global::Mono.Unix.Catalog.GetString ("0");
 			this.balanceUnconfirmedhbox.Add (this.unconfirmedLabel);
-			global::Gtk.Box.BoxChild w13 = ((global::Gtk.Box.BoxChild)(this.balanceUnconfirmedhbox [this.unconfirmedLabel]));
-			w13.Position = 1;
-			w13.Expand = false;
-			w13.Fill = false;
-			this.vbox2.Add (this.balanceUnconfirmedhbox);
-			global::Gtk.Box.BoxChild w14 = ((global::Gtk.Box.BoxChild)(this.vbox2 [this.balanceUnconfirmedhbox]));
+			global::Gtk.Box.BoxChild w14 = ((global::Gtk.Box.BoxChild)(this.balanceUnconfirmedhbox [this.unconfirmedLabel]));
 			w14.Position = 1;
 			w14.Expand = false;
 			w14.Fill = false;
+			this.vbox2.Add (this.balanceUnconfirmedhbox);
+			global::Gtk.Box.BoxChild w15 = ((global::Gtk.Box.BoxChild)(this.vbox2 [this.balanceUnconfirmedhbox]));
+			w15.Position = 1;
+			w15.Expand = false;
+			w15.Fill = false;
 			// Container child vbox2.Gtk.Box+BoxChild
 			this.balanceOrphanedhbox = new global::Gtk.HBox ();
 			this.balanceOrphanedhbox.Name = "balanceOrphanedhbox";
@@ -182,24 +194,24 @@ namespace LiteStatus
 			this.label4.Name = "label4";
 			this.label4.LabelProp = global::Mono.Unix.Catalog.GetString ("Orphaned:");
 			this.balanceOrphanedhbox.Add (this.label4);
-			global::Gtk.Box.BoxChild w15 = ((global::Gtk.Box.BoxChild)(this.balanceOrphanedhbox [this.label4]));
-			w15.Position = 0;
-			w15.Expand = false;
-			w15.Fill = false;
+			global::Gtk.Box.BoxChild w16 = ((global::Gtk.Box.BoxChild)(this.balanceOrphanedhbox [this.label4]));
+			w16.Position = 0;
+			w16.Expand = false;
+			w16.Fill = false;
 			// Container child balanceOrphanedhbox.Gtk.Box+BoxChild
 			this.orphanedLabel = new global::Gtk.Label ();
 			this.orphanedLabel.Name = "orphanedLabel";
 			this.orphanedLabel.LabelProp = global::Mono.Unix.Catalog.GetString ("0");
 			this.balanceOrphanedhbox.Add (this.orphanedLabel);
-			global::Gtk.Box.BoxChild w16 = ((global::Gtk.Box.BoxChild)(this.balanceOrphanedhbox [this.orphanedLabel]));
-			w16.Position = 1;
-			w16.Expand = false;
-			w16.Fill = false;
-			this.vbox2.Add (this.balanceOrphanedhbox);
-			global::Gtk.Box.BoxChild w17 = ((global::Gtk.Box.BoxChild)(this.vbox2 [this.balanceOrphanedhbox]));
-			w17.Position = 2;
+			global::Gtk.Box.BoxChild w17 = ((global::Gtk.Box.BoxChild)(this.balanceOrphanedhbox [this.orphanedLabel]));
+			w17.Position = 1;
 			w17.Expand = false;
 			w17.Fill = false;
+			this.vbox2.Add (this.balanceOrphanedhbox);
+			global::Gtk.Box.BoxChild w18 = ((global::Gtk.Box.BoxChild)(this.vbox2 [this.balanceOrphanedhbox]));
+			w18.Position = 2;
+			w18.Expand = false;
+			w18.Fill = false;
 			this.expander1.Add (this.vbox2);
 			this.GtkLabel1 = new global::Gtk.Label ();
 			this.GtkLabel1.Name = "GtkLabel1";
@@ -207,10 +219,10 @@ namespace LiteStatus
 			this.GtkLabel1.UseUnderline = true;
 			this.expander1.LabelWidget = this.GtkLabel1;
 			this.vbox1.Add (this.expander1);
-			global::Gtk.Box.BoxChild w19 = ((global::Gtk.Box.BoxChild)(this.vbox1 [this.expander1]));
-			w19.Position = 1;
-			w19.Expand = false;
-			w19.Fill = false;
+			global::Gtk.Box.BoxChild w20 = ((global::Gtk.Box.BoxChild)(this.vbox1 [this.expander1]));
+			w20.Position = 1;
+			w20.Expand = false;
+			w20.Fill = false;
 			this.Add (this.vbox1);
 			if ((this.Child != null)) {
 				this.Child.ShowAll ();
